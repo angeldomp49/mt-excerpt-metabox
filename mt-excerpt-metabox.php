@@ -1,4 +1,6 @@
 <?php
+include( 'Excerpt.php' );
+include( 'Metabox.php' );
 
 use MakechTec\ExcerptMetabox\Metabox;
 use MakechTec\ExcerptMetabox\Excerpt;

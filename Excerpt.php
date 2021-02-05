@@ -1,9 +1,11 @@
 <?php
-
-namespace MakechTec\ExcerptMetabox\Excerpt;
+namespace MakechTec\ExcerptMetabox;
 use MakechTec\ExcerptMetabox\Prefix;
 
-class Excerpt extends Prefix{
+
+include_once( 'Prefix.php' );
+
+class Excerpt implements Prefix{
 
     public static function addToSavePost(){
         add_action( 'save_post', self::withPrefix( 'save' ) );
@@ -17,5 +19,9 @@ class Excerpt extends Prefix{
             ]; 
             wp_update_post( $currentPost );
         }
+    }
+
+    public static function withPrefix( $func ){
+        return __CLASS__ . '::' . $func;
     }
 }

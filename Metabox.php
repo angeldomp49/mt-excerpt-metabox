@@ -1,9 +1,10 @@
 <?php
+namespace MakechTec\ExcerptMetabox;
+use MakechTec\ExcerptMetabox\Prefix;
 
-namespace MakechTec\ExcerptMetabox\Metabox;
-use MakechTec\Excerpt\Prefix;
+include_once( 'Prefix.php' );
 
-class Metabox extends Prefix{
+class Metabox implements Prefix{
     public const idSelector = 'mtEmExcerptMetabox';
     public const title = 'Custom Excerpt';
     public const pageType = 'post';
@@ -40,4 +41,7 @@ class Metabox extends Prefix{
         echo( esc_attr( $str ) );
     }
 
+    public static function withPrefix( $func ){
+        return __CLASS__ . '::' . $func;
+    }
 }
