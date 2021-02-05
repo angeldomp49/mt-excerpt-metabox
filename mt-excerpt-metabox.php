@@ -8,7 +8,8 @@ use MakechTec\ExcerptMetabox\Excerpt;
 /*
 Plugin Name: Excerpt Metabox
 Plugin URI: https://makechtecnology.com/excerpt-metabox
-Description: para el extracto
+Description: Create a text area for put the post extract, useful only if your
+theme does not do this.
 Author: Makech Tecnology
 Version: 1.0.0
 Author URI:https://makechtecnology.com
